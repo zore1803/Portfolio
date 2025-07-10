@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const Resume = () => {
   const handleDownload = () => {
     // Replace this URL with your actual resume PDF link
-    const resumeUrl = 'https://drive.google.com/uc?export=download&id=129qKo-KuYi15RSArpwOGq2FM1z7us06f';
+    const resumeUrl = 'https://drive.google.com/file/d/1Vs4mg4aLetnsHH3iX0_MzqzyNF-kcyYK/view?usp=drive_link';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Rohit_Zore_Resume.pdf';
