@@ -13,7 +13,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
       tech: ["JavaScript", "HTML", "MySQL", "Git"],
       github: "https://github.com/zore1803/guruji-pooja-seva-portal",
-      live: "https://guruji-pooja-seva-portal.vercel.app/",
+      live: "https://seva-profile-scribe.vercel.app/",
       period: "Jan 2025 - Jun 2025"
     },
     {
