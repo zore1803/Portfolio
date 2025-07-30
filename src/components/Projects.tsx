@@ -10,7 +10,7 @@ const Projects = () => {
       id: 1,
       title: "E-GURUJI",
       description: "Built a web-based platform to connect Pandits with customers for religious services. The system includes user registration, service booking, and schedule management, offering a seamless and intuitive interface for both parties. Deployed on Vercel platform.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      image: "https://unsplash.com/photos/a-candle-in-a-bowl-of-food-GardauGN-HU?w=600&h=400&fit=crop",
       tech: ["JavaScript", "HTML", "MySQL", "Git"],
       github: "https://github.com/zore1803/guruji-pooja-seva-portal",
       live: "https://seva-profile-scribe.vercel.app/",
