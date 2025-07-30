@@ -23,7 +23,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       tech: ["React", "JavaScript", "HTML", "Git"],
       github: "https://github.com/zore1803/Portfolio",
-      live: "https://porfolio-rohit-1803.vercel.app/",
+      live: "https://portfolio-nu-rouge-opzt6ksob6.vercel.app/",
       period: "2025"
     },
     {
