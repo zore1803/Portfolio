@@ -1,5 +1,5 @@
 import React from 'react';
-import { Braces, Code2, Database, GitBranch, KeyRound, Network, Radar, Shield, Smartphone, Terminal, Wrench } from 'lucide-react';
+import { Braces, Code2, Database, GitBranch, KeyRound, Network, Radar, Server, Shield, Smartphone, Terminal, Wrench } from 'lucide-react';
 
 const Skills = () => {
   const skillPanels = [
@@ -22,7 +22,8 @@ const Skills = () => {
       items: [
         { icon: Braces, name: 'JavaScript / UI', detail: 'ES6+, HTML5, CSS3, responsive UI' },
         { icon: Smartphone, name: 'React Native', detail: 'Expo web and Android APK' },
-        { icon: Database, name: 'Databases', detail: 'MySQL, Supabase PostgreSQL, CRUD' },
+        { icon: Server, name: 'Node.js / Express', detail: 'REST APIs, MERN stack backend' },
+        { icon: Database, name: 'Databases', detail: 'MongoDB, MySQL, Supabase PostgreSQL' },
       ],
     },
     {
@@ -41,7 +42,7 @@ const Skills = () => {
     { text: 'BLE', cls: 'left-[7%] top-[45%]' },
     { text: 'JWT', cls: 'left-[33%] top-[27%]' },
     { text: 'RBAC', cls: 'right-[35%] top-[24%]' },
-    { text: 'MySQL', cls: 'right-[10%] top-[46%]' },
+    { text: 'MongoDB', cls: 'right-[10%] top-[46%]' },
     { text: 'OWASP', cls: 'left-[29%] bottom-[19%]' },
     { text: 'REST APIs', cls: 'right-[30%] bottom-[16%]' },
   ];

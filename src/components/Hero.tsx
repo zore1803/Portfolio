@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Radar, ShieldCheck, Terminal, Wifi } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Radar, Server, ShieldCheck, Terminal, Wifi } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -14,6 +14,7 @@ const Hero = () => {
   };
 
   const heroCards = [
+    { title: 'DataCircles', text: 'Full Stack Intern building a MERN CRM and client portal', icon: Server, status: 'Jun 2026-now' },
     { title: 'LOQIT', text: 'Web app + Android APK security product', icon: Wifi, status: 'Oct 2025-now' },
     { title: 'AIIPLTech', text: 'Security+ and PenTest+ instructor-led training', icon: Terminal, status: 'May 2026-now' },
     { title: 'TryHackMe', text: 'Top 5% globally across 100+ rooms', icon: Radar, status: '77+ hrs' },
@@ -113,7 +114,7 @@ const Hero = () => {
             <p className="mt-2 text-sm leading-5 text-[var(--c-text-muted)]">OAuth 2.0, JWT, RBAC, encrypted APIs, BLE, Supabase, GIS tracking.</p>
           </div>
 
-          <div className="hero-card-row grid gap-4 md:grid-cols-3">
+          <div className="hero-card-row grid grid-cols-2 gap-4 lg:grid-cols-4">
             {heroCards.map((card) => (
               <div key={card.title} className="hud-card p-4">
                 <card.icon size={20} className="mb-4 text-[var(--c-accent)]" />

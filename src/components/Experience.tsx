@@ -1,8 +1,19 @@
 import React from 'react';
-import { Briefcase, GraduationCap, ShieldCheck } from 'lucide-react';
+import { Briefcase, Code2, GraduationCap, ShieldCheck } from 'lucide-react';
 
 const Experience = () => {
   const timeline = [
+    {
+      role: 'Full Stack Developer Intern',
+      company: 'DataCircles Technology, Thane',
+      period: 'Jun 2026 - Present',
+      details: [
+        'Building a MERN stack CRM and client portal product with a React + Vite front-end and a Node.js/Express REST API backend.',
+        'Gaining hands-on exposure to role-based authentication, JWT, and MongoDB schema design in a production codebase.',
+        'Collaborating on admin and client portal features including project tracking, billing, and document management.',
+      ],
+      color: 'var(--c-accent-3)',
+    },
     {
       role: 'Cybersecurity Trainee',
       company: 'AIIPLTech Pvt Ltd, Kharghar',
@@ -36,6 +47,8 @@ const Experience = () => {
     },
   ];
 
+  const roleIcons = [Code2, GraduationCap, Briefcase, ShieldCheck];
+
   return (
     <section id="career" className="section-wrap">
       <div className="section-inner">
@@ -47,12 +60,14 @@ const Experience = () => {
             </h2>
           </div>
           <p className="section-desc lg:justify-self-end">
-            A focused timeline of my analyst training, internship work, hands-on labs, and security tool development.
+            A focused timeline of my full-stack work, analyst training, internship work, hands-on labs, and security tool development.
           </p>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-3">
-          {timeline.map((item, index) => (
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {timeline.map((item, index) => {
+            const RoleIcon = roleIcons[index] ?? Briefcase;
+            return (
             <article
               key={item.role}
               className="glass-panel reveal reveal-up p-5"
@@ -63,7 +78,7 @@ const Experience = () => {
                   className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg"
                   style={{ background: `${item.color}22`, color: item.color }}
                 >
-                  {index === 0 ? <GraduationCap size={20} /> : index === 1 ? <Briefcase size={20} /> : <ShieldCheck size={20} />}
+                  <RoleIcon size={20} />
                 </span>
                 <span className="tag">{item.period}</span>
               </div>
@@ -77,7 +92,8 @@ const Experience = () => {
                 ))}
               </ul>
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -13,8 +13,8 @@ const About = () => {
     {
       icon: Code2,
       title: 'Full Stack Product Track',
-      desc: 'React Native, Expo, Supabase, REST APIs, MySQL, OAuth 2.0, JWT, RBAC, and payment workflows.',
-      points: ['LOQIT web app + Android APK', 'E-Guruji booking platform', 'End-to-end product ownership'],
+      desc: 'MERN stack (React, Node.js, Express, MongoDB), React Native, Expo, Supabase, REST APIs, MySQL, OAuth 2.0, JWT, RBAC, and payment workflows.',
+      points: ['DataCircles Technology internship', 'LOQIT web app + Android APK', 'E-Guruji booking platform'],
       color: 'var(--c-accent-2)',
     },
   ];
@@ -22,7 +22,7 @@ const About = () => {
   const quickFacts = [
     { icon: MapPin, label: 'Mumbai, Maharashtra' },
     { icon: Trophy, label: 'Top 5% globally on TryHackMe' },
-    { icon: BriefcaseBusiness, label: '4-month Elevate Labs internship' },
+    { icon: BriefcaseBusiness, label: 'Full Stack Intern @ DataCircles Technology' },
     { icon: GraduationCap, label: 'B.E. AI & Data Science, 2027' },
     { icon: Users, label: 'CSI Treasurer, college chapter' },
     { icon: Languages, label: 'English, Marathi, Hindi' },
@@ -54,7 +54,7 @@ const About = () => {
                 <p className="section-label mb-3">Profile Snapshot</p>
                 <h3 className="about-profile-title">Rohit Ramesh Zore</h3>
                 <p className="mt-3 text-sm leading-6 text-[var(--c-text-muted)] md:text-base">
-                  B.E. AI & Data Science student with 2 production-grade applications, a 4-month cybersecurity internship, and active instructor-led Security+ and PenTest+ training.
+                  B.E. AI & Data Science student currently interning as a Full Stack Developer at DataCircles Technology, with 2 production-grade applications, a 4-month cybersecurity internship, and active instructor-led Security+ and PenTest+ training.
                 </p>
               </div>
             </div>
