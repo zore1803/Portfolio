@@ -19,18 +19,27 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const updateActiveSection = () => {
+      ticking = false;
       for (const section of [...navItems].reverse()) {
         const el = document.getElementById(section.id);
         if (el && el.getBoundingClientRect().top <= 170) {
-          setActiveSection(section.id);
+          setActiveSection((current) => (current === section.id ? current : section.id));
           break;
         }
       }
     };
 
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
