@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Radar, Server, ShieldCheck, Terminal, Wifi } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Github, Linkedin, LockKeyhole, Mail, Radar, Server, Terminal, Wifi } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -44,7 +44,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h1 className="font-['Outfit'] text-4xl font-black uppercase leading-none text-[var(--c-text)] sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-black uppercase leading-none text-[var(--c-text)] sm:text-5xl lg:text-6xl">
               ROHIT ZORE
             </h1>
           </motion.div>
@@ -72,10 +72,10 @@ const Hero = () => {
             {[
               { text: 'React Native', cls: 'sm:left-0 sm:top-14' },
               { text: 'Supabase', cls: 'sm:left-4 sm:top-28' },
-              { text: 'OAuth/JWT', cls: 'sm:left-[18rem] sm:top-6' },
-              { text: 'RBAC', cls: 'sm:left-[19rem] sm:top-[5.4rem]' },
-              { text: 'Wireshark', cls: 'sm:left-[18rem] sm:top-[9.7rem]' },
-              { text: 'Python', cls: 'sm:left-[17rem] sm:top-[14rem]' },
+              { text: 'OAuth/JWT', cls: 'sm:left-[23.5rem] sm:top-6' },
+              { text: 'RBAC', cls: 'sm:left-[24.5rem] sm:top-[5.4rem]' },
+              { text: 'Wireshark', cls: 'sm:left-[23.5rem] sm:top-[9.7rem]' },
+              { text: 'Python', cls: 'sm:left-[22.5rem] sm:top-[14rem]' },
             ].map((chip) => (
               <span key={chip.text} className={`tag skill-chip static sm:absolute ${chip.cls}`}>
                 {chip.text}
@@ -88,39 +88,68 @@ const Hero = () => {
           <div className="circuit-line left-[5%] top-[21%] h-24 w-28 border-l border-t after:right-[-4px] after:top-[-4px]" />
           <div className="circuit-line right-[7%] top-[43%] h-28 w-36 border-r border-t after:left-[-4px] after:top-[-4px]" />
 
-          <div className="glass-panel hero-visual-card hero-ui-card p-4">
-            <div className="mb-4 h-32 overflow-hidden rounded-md border border-white/10 bg-[radial-gradient(circle_at_35%_38%,rgba(96,255,241,0.65),transparent_18%),linear-gradient(135deg,rgba(255,134,87,0.42),rgba(10,23,42,0.95))]">
-              <div className="grid h-full grid-cols-3 gap-2 p-4 opacity-70">
-                <span className="rounded bg-white/10" />
-                <span className="rounded bg-[var(--c-accent)]/25" />
-                <span className="rounded bg-white/10" />
-                <span className="col-span-2 rounded bg-[var(--c-accent-2)]/30" />
-                <span className="rounded bg-white/10" />
-              </div>
+          <div className="glass-panel hero-visual-card hero-ui-card overflow-hidden p-0">
+            <div className="hero-term-bar">
+              <span className="hero-term-dot" />
+              <span className="hero-term-dot" />
+              <span className="hero-term-dot" />
+              <span className="hero-term-title">rohit@portfolio&nbsp;:&nbsp;~</span>
             </div>
-            <h3 className="font-['Outfit'] text-xl font-black uppercase leading-none text-[var(--c-text)]">Threat-Aware UI</h3>
-            <p className="mt-2 text-sm leading-5 text-[var(--c-text-muted)]">
-              Interfaces for authentication, device recovery, incident logging, and secure user workflows.
-            </p>
+            <div className="hero-term-body">
+              <p><span className="ht-prompt">$</span> whoami</p>
+              <p className="ht-out">cybersecurity-analyst // full-stack-dev</p>
+              <p><span className="ht-prompt">$</span> stack --core</p>
+              <p className="ht-out">React Native · Supabase · Node · REST</p>
+              <p><span className="ht-prompt">$</span> status</p>
+              <p className="ht-out ht-live-line">
+                <span className="ht-live" /> building LOQIT &amp; DataCircles CRM
+              </p>
+            </div>
           </div>
 
           <div className="glass-panel hero-visual-card hero-security-card p-4">
-            <div className="mb-4 h-28 overflow-hidden rounded-md border border-white/10 bg-[linear-gradient(135deg,#060b1f,#0e3846_45%,#ff744d)]">
-              <div className="flex h-full items-center justify-center">
-                <ShieldCheck size={70} className="text-[var(--c-accent)] drop-shadow-[0_0_18px_rgba(96,255,241,0.65)]" />
+            <div className="flex items-center justify-between">
+              <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[var(--c-accent-2)]">Featured Build</p>
+              <span className="hero-spot-live">
+                <span className="hero-avail-dot" />
+                Live
+              </span>
+            </div>
+
+            <div className="mt-2.5 flex items-center gap-3">
+              <span className="hero-spot-icon">
+                <LockKeyhole size={20} />
+              </span>
+              <div>
+                <h3 className="font-display text-2xl font-black uppercase leading-none text-[var(--c-text)]">LOQIT</h3>
+                <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-[var(--c-text-muted)]">
+                  Anti-Theft BLE Platform
+                </p>
               </div>
             </div>
-            <h3 className="font-['Outfit'] text-xl font-black uppercase leading-none text-[var(--c-text)]">Security Stack</h3>
-            <p className="mt-2 text-sm leading-5 text-[var(--c-text-muted)]">OAuth 2.0, JWT, RBAC, encrypted APIs, BLE, Supabase, GIS tracking.</p>
+
+            <p className="mt-2.5 text-sm leading-5 text-[var(--c-text-muted)]">
+              Web app + Android APK for device recovery — BLE proximity, GIS tracking, and secure user workflows.
+            </p>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['React Native', 'Supabase', 'BLE', 'GIS'].map((t) => (
+                <span key={t} className="hero-spot-tag">{t}</span>
+              ))}
+            </div>
+
+            <button className="hero-spot-link" onClick={() => scrollToSection('projects')}>
+              View project <ArrowUpRight size={15} />
+            </button>
           </div>
 
           <div className="hero-card-row grid grid-cols-2 gap-4 lg:grid-cols-4">
             {heroCards.map((card) => (
               <div key={card.title} className="hud-card p-4">
                 <card.icon size={20} className="mb-4 text-[var(--c-accent)]" />
-                <p className="font-['Outfit'] text-lg font-black uppercase leading-none text-[var(--c-text)]">{card.title}</p>
-                <p className="mt-2 min-h-10 text-xs leading-5 text-[var(--c-text-muted)]">{card.text}</p>
-                <span className="mt-3 inline-flex rounded bg-[var(--c-accent-2)]/20 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-[var(--c-accent-3)]">
+                <p className="font-display text-lg font-black uppercase leading-none text-[var(--c-text)]">{card.title}</p>
+                <p className="mt-2 min-h-10 text-[13px] leading-5 text-[var(--c-text-muted)]">{card.text}</p>
+                <span className="hud-status mt-3 inline-flex rounded px-2 py-1 text-[10px] font-black uppercase tracking-wider">
                   {card.status}
                 </span>
               </div>

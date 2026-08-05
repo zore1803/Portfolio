@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -17,14 +16,16 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from('contact_submissions').insert([
-        { name: formData.name, email: formData.email, message: formData.message },
-      ]);
-      if (error) throw error;
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-      await supabase.functions.invoke('send-contact-notification', {
-        body: { name: formData.name, email: formData.email, message: formData.message },
-      }).catch(console.error);
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || 'Request failed');
+      }
 
       toast({
         title: 'Message sent',
@@ -35,7 +36,7 @@ const Contact = () => {
       console.error('Error:', error);
       toast({
         title: 'Something went wrong',
-        description: 'Please try again or email me directly.',
+        description: 'Please try again or email me directly at rzore430@gmail.com.',
         variant: 'destructive',
       });
     } finally {
@@ -99,7 +100,7 @@ const Contact = () => {
           </div>
 
           <div className="glass-panel reveal reveal-up p-6 md:p-8">
-            <h3 className="mb-6 flex items-center gap-3 font-['Outfit'] text-2xl font-black uppercase leading-none text-[var(--c-text)]">
+            <h3 className="mb-6 flex items-center gap-3 font-display text-2xl font-black uppercase leading-none text-[var(--c-text)]">
               <Send size={22} className="text-[var(--c-accent-2)]" />
               Send a Message
             </h3>
@@ -124,7 +125,7 @@ const Contact = () => {
                     onBlur={() => setFocusedField(null)}
                     className="w-full rounded-lg border px-4 py-3 text-sm outline-none transition"
                     style={{
-                      background: 'rgba(255,255,255,0.06)',
+                      background: 'var(--c-surface-2)',
                       borderColor: focusedField === field.name ? 'var(--c-accent)' : 'var(--c-border)',
                       color: 'var(--c-text)',
                       boxShadow: focusedField === field.name ? '0 0 0 3px var(--c-glow)' : 'none',
@@ -149,7 +150,7 @@ const Contact = () => {
                   onBlur={() => setFocusedField(null)}
                   className="w-full resize-none rounded-lg border px-4 py-3 text-sm outline-none transition"
                   style={{
-                    background: 'rgba(255,255,255,0.06)',
+                    background: 'var(--c-surface-2)',
                     borderColor: focusedField === 'message' ? 'var(--c-accent)' : 'var(--c-border)',
                     color: 'var(--c-text)',
                     boxShadow: focusedField === 'message' ? '0 0 0 3px var(--c-glow)' : 'none',

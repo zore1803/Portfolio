@@ -32,11 +32,11 @@ const About = () => {
     <section id="about" className="section-wrap">
       <div className="soft-glow right-[-7rem] top-16 h-80 w-80 rounded-full bg-[var(--c-accent)]" />
       <div className="section-inner">
-        <div className="mb-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="mb-6 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="section-label mb-4">About Me</p>
+            <p className="section-label mb-4">Introduction</p>
             <h2 className="section-heading">
-              Secure Systems, <span className="warm-text">Usable Products</span>
+              About <span className="warm-text">Me</span>
             </h2>
           </div>
           <p className="section-desc">

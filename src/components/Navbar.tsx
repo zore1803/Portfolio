@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { BriefcaseBusiness, FileText, Home, Mail, Menu, Moon, Shield, Sun, User, X, Zap } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Calendar, Menu, Moon, Sun, X } from 'lucide-react';
 import { useTheme } from '@/hooks/useThemeContext';
 
 const navItems = [
-  { label: 'Home', id: 'hero', icon: Home },
-  { label: 'About', id: 'about', icon: User },
-  { label: 'Projects', id: 'projects', icon: BriefcaseBusiness },
-  { label: 'Skills', id: 'skills', icon: Zap },
-  { label: 'Experience', id: 'career', icon: BriefcaseBusiness },
-  { label: 'Resume', id: 'resume', icon: FileText },
-  { label: 'Contact', id: 'contact', icon: Mail },
+  { label: 'Home', id: 'hero' },
+  { label: 'About', id: 'about' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Experience', id: 'career' },
+  { label: 'Resume', id: 'resume' },
+  { label: 'Contact', id: 'contact' },
 ];
 
 const Navbar = () => {
@@ -50,81 +49,69 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-50 px-4 py-4 md:px-8">
-        <div className="nav-topbar mx-auto flex max-w-7xl items-center justify-between">
-          <button onClick={() => scrollToSection('hero')} className="group flex items-center gap-3">
-            <span className="theme-icon-button">
-              <Shield size={20} className="text-[var(--c-accent)]" />
-            </span>
-            <motion.span
-              className="hidden text-left sm:block"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="block font-['Outfit'] text-sm font-black uppercase tracking-wide text-[var(--c-text)]">
-                Rohit Zore
-              </span>
-              <span className="block text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--c-text-muted)]">
-                Cyber Security // Full Stack
-              </span>
-            </motion.span>
-          </button>
-
-          <div className="mobile-nav">
-            <div className="flex items-center gap-2">
-              <button
-                className="theme-icon-button h-10 w-10"
-                onClick={() => setIsOpen((value) => !value)}
-                aria-label="Toggle menu"
-              >
-                {isOpen ? <X size={18} /> : <Menu size={18} />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {isOpen && (
-          <div className="mobile-nav mx-auto mt-3 max-w-7xl rounded-lg border border-[var(--c-border)] bg-[var(--c-surface-solid)]/95 p-2 shadow-2xl backdrop-blur-xl">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`flex w-full items-center gap-3 rounded-md px-3 py-3 text-sm font-black uppercase ${
-                  activeSection === item.id ? 'bg-[var(--c-accent-2)] text-[#111827]' : 'text-[var(--c-text-muted)]'
-                }`}
-              >
-                <item.icon size={16} />
-                {item.label}
-              </button>
-            ))}
-          </div>
-        )}
-      </header>
-
-      <aside className="nav-orbit" aria-label="Section navigation">
-        <div className="nav-orbit-panel">
+      {/* Mobile menu overlay */}
+      <div className={`copper-mobile-overlay ${isOpen ? 'open' : ''}`}>
+        <div className="copper-mobile-links">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`nav-orbit-button ${activeSection === item.id ? 'active' : ''}`}
+              className={activeSection === item.id ? 'active' : ''}
             >
-              <span className="nav-orbit-dot" />
-              <item.icon size={16} />
-              <span>{item.label}</span>
+              {item.label}
+            </button>
+          ))}
+          <button className="copper-talk-btn mobile" onClick={() => scrollToSection('contact')}>
+            <span className="copper-talk-icon">
+              <Calendar size={13} />
+            </span>
+            Let&rsquo;s Talk &rsaquo;
+          </button>
+        </div>
+      </div>
+
+      {/* Floating pill navbar */}
+      <nav className="copper-navbar">
+        <button className="copper-nav-logo" onClick={() => scrollToSection('hero')} aria-label="Home">
+          <span className="copper-nav-mark">RZ</span>
+        </button>
+
+        <span className="copper-nav-divider desktop-only" />
+
+        <div className="copper-nav-links desktop-only">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={activeSection === item.id ? 'active' : ''}
+            >
+              {item.label}
             </button>
           ))}
         </div>
-      </aside>
 
-      <button
-        onClick={toggleTheme}
-        className="theme-floating-toggle"
-        aria-label="Toggle theme"
-      >
-        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-      </button>
+        <span className="copper-nav-divider desktop-only" />
+
+        <div className="copper-nav-action desktop-only">
+          <button className="copper-theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+          <button className="copper-talk-link" onClick={() => scrollToSection('contact')}>
+            <span className="copper-talk-icon">
+              <Calendar size={13} />
+            </span>
+            Let&rsquo;s Talk
+          </button>
+        </div>
+
+        <button
+          className="copper-mobile-btn"
+          onClick={() => setIsOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
+      </nav>
     </>
   );
 };

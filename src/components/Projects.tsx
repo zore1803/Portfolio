@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Bluetooth, CalendarDays, Github, Globe, Home, LogIn, Moon, ScanSearch, Shield, Smartphone, Workflow } from 'lucide-react';
+import { ArrowUpRight, Bluetooth, Github, Globe, ScanSearch, Shield, Workflow } from 'lucide-react';
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(1);
@@ -60,118 +60,15 @@ const Projects = () => {
 
   const activeProject = projects.find((project) => project.id === selectedId) ?? projects[0];
 
-  const renderProjectPreview = () => {
-    if (activeProject.title === 'LOQIT') {
-      return (
-        <div className="project-preview loqit-preview">
-          <div className="preview-nav">
-            <strong>LOQIT</strong>
-            <span>Features</span>
-            <span>How It Works</span>
-            <span>Download</span>
-            <Moon size={16} />
-            <button>Sign In</button>
-          </div>
-          <div className="loqit-hero">
-            <div className="loqit-orb">
-              <span>LOQIT</span>
-            </div>
-            <div>
-              <p className="preview-kicker">LOQIT - Next Gen Phone Recovery Protocol</p>
-              <h4>Your Device, Always Protected</h4>
-              <p>BLE alerts, secure anonymous recovery, and trusted device registration.</p>
-              <div className="preview-actions">
-                <button>Get Started Free</button>
-                <span>See How It Works</span>
-              </div>
-            </div>
-          </div>
-          <div className="loqit-status">
-            <Smartphone size={18} />
-            <div>
-              <strong>Web + APK</strong>
-              <span>Device recovery workflow active</span>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    if (activeProject.title === 'E-Guruji') {
-      return (
-        <div className="project-preview eguruji-preview">
-          <div className="preview-nav">
-            <strong>E-GURUJI</strong>
-            <span>Home</span>
-            <span>Services</span>
-            <span>Live Streams</span>
-            <span>Astrology</span>
-            <button>
-              <LogIn size={14} />
-              Login
-            </button>
-          </div>
-          <div className="eguruji-hero">
-            <h4>E-GURUJI</h4>
-            <p>Connect with experienced Pandits for authentic Pooja services</p>
-            <div className="preview-actions">
-              <button>Browse Services</button>
-              <span>Sign In / Register</span>
-            </div>
-          </div>
-          <div className="eguruji-cards">
-            {[
-              { icon: Shield, title: 'Expert Pandits', text: 'Verified guidance' },
-              { icon: CalendarDays, title: 'Easy Booking', text: 'Flexible dates' },
-              { icon: Home, title: 'At Location', text: 'Home or venue' },
-            ].map((item) => (
-              <div key={item.title}>
-                <item.icon size={18} />
-                <strong>{item.title}</strong>
-                <span>{item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      <div className="project-preview cyber-preview">
-        <div className="preview-nav">
-          <strong>{activeProject.title}</strong>
-          <span>Scan</span>
-          <span>Report</span>
-          <span>Deploy</span>
-        </div>
-        <div className="cyber-window">
-          <div className="mb-4 flex gap-2">
-            <span className="h-2 w-2 rounded-full bg-[var(--c-accent-2)]" />
-            <span className="h-2 w-2 rounded-full bg-[var(--c-accent)]" />
-            <span className="h-2 w-2 rounded-full bg-[var(--c-violet)]" />
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            <span className="h-10 rounded bg-white/10" />
-            <span className="h-10 rounded bg-[var(--c-accent)]/25" />
-            <span className="h-10 rounded bg-white/10" />
-            <span className="col-span-2 h-10 rounded bg-[var(--c-accent-2)]/25" />
-            <span className="h-10 rounded bg-white/10" />
-          </div>
-        </div>
-        <span className="preview-badge">Feature Highlight</span>
-      </div>
-    );
-  };
-
   return (
     <section id="projects" className="section-wrap">
       <div className="soft-glow left-[-6rem] top-32 h-72 w-72 rounded-full bg-[var(--c-accent-2)]" />
       <div className="section-inner">
-        <div className="mb-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="mb-6 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="section-label mb-4">Projects</p>
+            <p className="section-label mb-4">Selected Work</p>
             <h2 className="section-heading">
-              A Curated <span className="gradient-text">Collection</span>
+              <span className="warm-text">Projects</span>
             </h2>
           </div>
           <p className="section-desc lg:justify-self-end">
@@ -181,13 +78,9 @@ const Projects = () => {
 
         <div className="grid gap-6 lg:grid-cols-[1.18fr_0.82fr]">
           <article
-            className="glass-panel project-feature-panel min-h-[520px] p-5 md:p-7"
+            className="glass-panel project-feature-panel flex flex-col justify-center p-6 md:p-8"
             style={{ boxShadow: `0 0 48px color-mix(in srgb, ${activeProject.accent} 24%, transparent)` }}
           >
-            <div className="mb-6 overflow-hidden rounded-md border border-white/10 bg-[#06111f]">
-              {renderProjectPreview()}
-            </div>
-
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
                 <div className="mb-3 flex items-center gap-3">
@@ -195,7 +88,7 @@ const Projects = () => {
                     <activeProject.icon size={22} />
                   </span>
                   <div>
-                    <h3 className="font-['Outfit'] text-3xl font-black uppercase leading-none text-[var(--c-text)]">
+                    <h3 className="font-display text-3xl font-black uppercase leading-none text-[var(--c-text)]">
                       {activeProject.title}
                     </h3>
                     <p className="text-sm text-[var(--c-text-muted)]">{activeProject.subtitle}</p>
@@ -244,7 +137,7 @@ const Projects = () => {
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-3">
-                      <h4 className="truncate font-['Outfit'] text-lg font-black uppercase leading-none text-[var(--c-text)]">{project.title}</h4>
+                      <h4 className="truncate font-display text-lg font-black uppercase leading-none text-[var(--c-text)]">{project.title}</h4>
                       {project.featured && (
                         <span className="rounded bg-[var(--c-accent-2)]/20 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-[var(--c-accent-3)]">
                           Featured

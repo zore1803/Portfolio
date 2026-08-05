@@ -3,7 +3,7 @@ import { Award, GraduationCap, Trophy } from 'lucide-react';
 
 const Credentials = () => {
   const education = [
-    { degree: 'B.E. in AI & Data Science', school: 'Vasantdada Patil College of Engineering, Mumbai', period: '2023 - 2027', score: 'CGPA: 7.27' },
+    { degree: 'B.E. in AI & Data Science', school: 'Vasantdada Patil College of Engineering, Mumbai', period: '2023 - 2027', score: 'CGPA: 7.5' },
     { degree: 'HSC Science - PCM', school: 'D.G. Ruparel College, Mumbai', period: '2021 - 2023', score: '53.5%' },
     { degree: 'SSC', school: 'Little Star English High School, Mumbai', period: '2020 - 2021', score: '86.4%' },
   ];
@@ -46,14 +46,14 @@ const Credentials = () => {
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--c-accent-2)]/15 text-[var(--c-accent-2)]">
                 <GraduationCap size={20} />
               </span>
-              <h3 className="font-['Outfit'] text-xl font-black uppercase leading-none text-[var(--c-text)]">Education</h3>
+              <h3 className="font-display text-xl font-black uppercase leading-none text-[var(--c-text)]">Education</h3>
             </div>
             <div className="space-y-4">
               {education.map((edu) => (
-                <div key={edu.degree} className="rounded-lg border border-[var(--c-border)] bg-white/5 p-4">
+                <div key={edu.degree} className="rounded-lg border border-[var(--c-border)] bg-[var(--c-surface-2)] p-4">
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
-                      <h4 className="font-['Outfit'] text-base font-black uppercase text-[var(--c-text)]">{edu.degree}</h4>
+                      <h4 className="font-display text-base font-black uppercase text-[var(--c-text)]">{edu.degree}</h4>
                       <p className="mt-1 text-sm leading-5 text-[var(--c-text-muted)]">{edu.school}</p>
                     </div>
                     <span className="tag">{edu.period}</span>
@@ -72,7 +72,7 @@ const Credentials = () => {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--c-violet)]/15 text-[var(--c-violet)]">
                   <Award size={20} />
                 </span>
-                <h3 className="font-['Outfit'] text-xl font-black uppercase leading-none text-[var(--c-text)]">Certifications</h3>
+                <h3 className="font-display text-xl font-black uppercase leading-none text-[var(--c-text)]">Certifications</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {certifications.map((cert) => (
@@ -88,11 +88,11 @@ const Credentials = () => {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--c-accent-3)]/15 text-[var(--c-accent-3)]">
                   <Trophy size={20} />
                 </span>
-                <h3 className="font-['Outfit'] text-xl font-black uppercase leading-none text-[var(--c-text)]">Achievements</h3>
+                <h3 className="font-display text-xl font-black uppercase leading-none text-[var(--c-text)]">Achievements</h3>
               </div>
               <div className="grid gap-3">
                 {achievements.map((item) => (
-                  <div key={item} className="rounded-lg border border-[var(--c-border)] bg-white/5 p-4 text-sm font-bold leading-6 text-[var(--c-text-muted)]">
+                  <div key={item} className="rounded-lg border border-[var(--c-border)] bg-[var(--c-surface-2)] p-4 text-sm font-bold leading-6 text-[var(--c-text-muted)]">
                     {item}
                   </div>
                 ))}

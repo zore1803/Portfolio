@@ -39,12 +39,12 @@ const Skills = () => {
   ];
 
   const floatingSkills = [
-    { text: 'BLE', cls: 'left-[7%] top-[45%]' },
-    { text: 'JWT', cls: 'left-[33%] top-[27%]' },
-    { text: 'RBAC', cls: 'right-[35%] top-[24%]' },
-    { text: 'MongoDB', cls: 'right-[10%] top-[46%]' },
-    { text: 'OWASP', cls: 'left-[29%] bottom-[19%]' },
-    { text: 'REST APIs', cls: 'right-[30%] bottom-[16%]' },
+    { text: 'BLE', cls: 'left-[30%] top-[42%]' },
+    { text: 'JWT', cls: 'left-[34%] top-[25%]' },
+    { text: 'RBAC', cls: 'right-[34%] top-[25%]' },
+    { text: 'MongoDB', cls: 'right-[30%] top-[42%]' },
+    { text: 'OWASP', cls: 'left-[31%] bottom-[20%]' },
+    { text: 'REST APIs', cls: 'right-[31%] bottom-[20%]' },
   ];
 
   return (
@@ -64,16 +64,6 @@ const Skills = () => {
 
         <div className="skills-map">
           <div className="skills-map-title">Skills</div>
-
-          <div className="skills-backdrop-window skills-window-a">
-            <span />
-            <span />
-            <span />
-          </div>
-          <div className="skills-backdrop-window skills-window-b">
-            <span />
-            <span />
-          </div>
 
           <svg className="skills-wires" viewBox="0 0 1000 620" aria-hidden="true">
             <path d="M500 304 C408 232 346 188 246 184" />
@@ -117,15 +107,6 @@ const Skills = () => {
               {skill.text}
             </span>
           ))}
-
-          <div className="avatar-ring skills-avatar">
-            <img src="/lovable-uploads/dca1d829-b131-45a7-8d52-3cf6cd1550d2.png" alt="Rohit Zore" />
-          </div>
-          <div className="skills-avatar-tags">
-            <span className="tag">Top 5% THM</span>
-            <span className="tag">100+ Rooms</span>
-            <span className="tag">77+ Hours</span>
-          </div>
         </div>
       </div>
     </section>

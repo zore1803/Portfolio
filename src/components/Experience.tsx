@@ -82,7 +82,7 @@ const Experience = () => {
                 </span>
                 <span className="tag">{item.period}</span>
               </div>
-              <h3 className="font-['Outfit'] text-xl font-black uppercase leading-none text-[var(--c-text)]">{item.role}</h3>
+              <h3 className="font-display text-xl font-black uppercase leading-none text-[var(--c-text)]">{item.role}</h3>
               <p className="mt-2 text-sm font-bold" style={{ color: item.color }}>{item.company}</p>
               <ul className="mt-5 space-y-3 text-sm leading-6 text-[var(--c-text-muted)]">
                 {item.details.map((detail) => (

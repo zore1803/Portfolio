@@ -13,8 +13,8 @@ type Particle = {
 };
 
 const randomBetween = (min: number, max: number) => Math.random() * (max - min) + min;
-const DARK_COLORS = ['#00f5ff', '#00e5cc', '#3D8EFF', '#60efff', '#aac7ff', '#e0eaff'];
-const LIGHT_COLORS = ['#0d2d6e', '#1e40af', '#0e7490', '#1a5276', '#155e75', '#334155'];
+const DARK_COLORS = ['#e8703a', '#ff9a5a', '#c85000', '#f0a56a', '#e0a458', '#f3ece1'];
+const LIGHT_COLORS = ['#c85000', '#8d3118', '#a8461c', '#1a1a1a', '#b98725', '#3a2a1e'];
 const MOUSE_RADIUS = 90;
 const SPRING = 0.045;
 const DAMPING = 0.82;
