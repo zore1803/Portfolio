@@ -8,7 +8,7 @@ const Experience = () => {
       company: 'DataCircles Technology, Thane',
       period: 'Jun 2026 - Present',
       details: [
-        "Contributing to DataCircles' production MERN CRM and Client Portal (thecopperstudio.com) across front-end (React + Vite) and backend (Node.js/Express) modules.",
+        "Contributing to DataCircles' production MERN CRM and Client Portal across front-end (React + Vite) and backend (Node.js/Express) modules, deployed live at thecopperstudio.com and app.datacircles.in.",
         'Working with role-based authentication, JWT, and MongoDB schema design in a production codebase.',
         'Collaborating on package purchasing, Razorpay payments, invoicing, Kanban/Gantt project tracking, document management, and meeting scheduling.',
         'Tech Lead of a 5-member developer team, guiding development on the platform.',

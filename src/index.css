@@ -1789,6 +1789,7 @@
 }
 
 .skills-panel-bottom {
+  z-index: 7;
   left: 50%;
   bottom: 4%;
   transform: translateX(-50%);

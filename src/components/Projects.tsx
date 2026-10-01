@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Bluetooth, Briefcase, Github, Globe, ScanSearch, Shield, Workflow } from 'lucide-react';
+import { ArrowUpRight, Bluetooth, Briefcase, Github, Globe, Shield, Workflow } from 'lucide-react';
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(1);
@@ -21,12 +21,12 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: 'Copper Studio CRM',
-      subtitle: 'DataCircles CRM & Client Portal (Internship)',
+      title: 'DataCircles CRM',
+      subtitle: 'Live CRM & Client Portal',
       description:
-        "DataCircles Technology's production MERN CRM and Client Portal (thecopperstudio.com). I work across front-end and backend modules on admin and client features: package purchasing, Razorpay payments, invoice generation, project tracking with Kanban and Gantt timelines, document management, and meeting scheduling, secured with role-based auth and JWT.",
+        "DataCircles Technology's production MERN CRM and Client Portal, live at app.datacircles.in. I work across front-end and backend modules on admin and client features: package purchasing, Razorpay payments, invoice generation, project tracking with Kanban and Gantt timelines, document management, and meeting scheduling, secured with role-based auth and JWT.",
       tech: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'Razorpay', 'JWT'],
-      live: 'https://thecopperstudio.com',
+      live: 'https://app.datacircles.in',
       period: 'Jun 2026 - Present',
       icon: Briefcase,
       accent: 'var(--c-accent-3)',
@@ -43,18 +43,6 @@ const Projects = () => {
       period: 'Sep - Oct 2024',
       icon: Workflow,
       accent: 'var(--c-accent-2)',
-    },
-    {
-      id: 3,
-      title: 'Security Training',
-      subtitle: 'Assessment Tools & Analyst Labs',
-      description:
-        'Hands-on cybersecurity work across AIIPLTech training and Elevate Labs internship: vulnerability assessment, Python keylogger and scanner development, Wireshark traffic analysis, firewall review, password policy analysis, and structured risk reporting.',
-      tech: ['Python', 'Wireshark', 'Risk Reports', 'Firewalls', 'CIA Triad'],
-      github: 'https://github.com/zore1803',
-      period: 'Jan 2026 - Present',
-      icon: ScanSearch,
-      accent: 'var(--c-violet)',
     },
     {
       id: 4,
