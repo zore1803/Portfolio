@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Code2, GraduationCap, ShieldCheck } from 'lucide-react';
+import { BookOpen, Briefcase, Code2, GraduationCap, ShieldCheck } from 'lucide-react';
 
 const Experience = () => {
   const timeline = [
@@ -8,9 +8,10 @@ const Experience = () => {
       company: 'DataCircles Technology, Thane',
       period: 'Jun 2026 - Present',
       details: [
-        'Building a MERN stack CRM and client portal product with a React + Vite front-end and a Node.js/Express REST API backend.',
-        'Gaining hands-on exposure to role-based authentication, JWT, and MongoDB schema design in a production codebase.',
-        'Collaborating on admin and client portal features including project tracking, billing, and document management.',
+        "Contributing to DataCircles' production MERN CRM and Client Portal (thecopperstudio.com) across front-end (React + Vite) and backend (Node.js/Express) modules.",
+        'Working with role-based authentication, JWT, and MongoDB schema design in a production codebase.',
+        'Collaborating on package purchasing, Razorpay payments, invoicing, Kanban/Gantt project tracking, document management, and meeting scheduling.',
+        'Helped resolve production deployment, database persistence, and synchronization challenges.',
       ],
       color: 'var(--c-accent-3)',
     },
@@ -25,13 +26,13 @@ const Experience = () => {
       color: 'var(--c-violet)',
     },
     {
-      role: 'Cyber Security Intern',
-      company: 'Elevate Labs',
-      period: 'Jan 2026 - Apr 2026',
+      role: 'Mathematics & Chemistry Tutor',
+      company: 'Nitores Samarth Classes, Worli Village (Part-Time)',
+      period: 'Jun 2023 - Present',
       details: [
-        'Conducted vulnerability assessments and documented weak credentials, open ports, access control gaps, and remediation steps.',
-        'Built Python-based keylogger and vulnerability scanner tools for authorized internal security testing.',
-        'Analyzed live network traffic with Wireshark and reviewed firewall/access control configurations.',
+        'Teach Mathematics and Chemistry to Class 11 and 12 students with personalized learning plans and doubt-solving sessions.',
+        'Simplify complex concepts to improve student understanding and academic performance.',
+        'Strengthened communication, mentoring, and problem-solving skills through one-on-one and group teaching.',
       ],
       color: 'var(--c-accent)',
     },
@@ -47,7 +48,7 @@ const Experience = () => {
     },
   ];
 
-  const roleIcons = [Code2, GraduationCap, Briefcase, ShieldCheck];
+  const roleIcons = [Code2, GraduationCap, BookOpen, ShieldCheck];
 
   return (
     <section id="career" className="section-wrap">

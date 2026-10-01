@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Bluetooth, Github, Globe, ScanSearch, Shield, Workflow } from 'lucide-react';
+import { ArrowUpRight, Bluetooth, Briefcase, Github, Globe, ScanSearch, Shield, Workflow } from 'lucide-react';
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(1);
@@ -18,6 +18,18 @@ const Projects = () => {
       icon: Bluetooth,
       featured: true,
       accent: 'var(--c-accent)',
+    },
+    {
+      id: 5,
+      title: 'Copper Studio CRM',
+      subtitle: 'DataCircles CRM & Client Portal (Internship)',
+      description:
+        "DataCircles Technology's production MERN CRM and Client Portal (thecopperstudio.com). I work across front-end and backend modules on admin and client features: package purchasing, Razorpay payments, invoice generation, project tracking with Kanban and Gantt timelines, document management, and meeting scheduling, secured with role-based auth and JWT.",
+      tech: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'Razorpay', 'JWT'],
+      live: 'https://thecopperstudio.com',
+      period: 'Jun 2026 - Present',
+      icon: Briefcase,
+      accent: 'var(--c-accent-3)',
     },
     {
       id: 2,

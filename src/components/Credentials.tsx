@@ -3,7 +3,7 @@ import { Award, GraduationCap, Trophy } from 'lucide-react';
 
 const Credentials = () => {
   const education = [
-    { degree: 'B.E. in AI & Data Science', school: 'Vasantdada Patil College of Engineering, Mumbai', period: '2023 - 2027', score: 'CGPA: 7.5' },
+    { degree: 'B.E. in AI & Data Science', school: 'Vasantdada Patil College of Engineering, Mumbai', period: '2023 - 2027', score: 'CGPA: 7.45' },
     { degree: 'HSC Science - PCM', school: 'D.G. Ruparel College, Mumbai', period: '2021 - 2023', score: '53.5%' },
     { degree: 'SSC', school: 'Little Star English High School, Mumbai', period: '2020 - 2021', score: '86.4%' },
   ];
