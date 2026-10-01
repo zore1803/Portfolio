@@ -1,5 +1,5 @@
 import React from 'react';
-import { Braces, Code2, Database, GitBranch, KeyRound, Network, Radar, Server, Shield, Smartphone, Terminal, Wrench } from 'lucide-react';
+import { Braces, Building2, Cloud, Code2, Database, GitBranch, KeyRound, Network, Radar, Server, Shield, Smartphone, Terminal, Wrench } from 'lucide-react';
 
 const Skills = () => {
   const skillPanels = [
@@ -23,7 +23,7 @@ const Skills = () => {
         { icon: Braces, name: 'JavaScript / UI', detail: 'ES6+, HTML5, CSS3, responsive UI' },
         { icon: Smartphone, name: 'React Native', detail: 'Expo web and Android APK' },
         { icon: Server, name: 'Node.js / Express', detail: 'REST APIs, MERN stack backend' },
-        { icon: Database, name: 'Databases', detail: 'MongoDB, MySQL, Supabase PostgreSQL' },
+        { icon: Database, name: 'Databases', detail: 'MongoDB, MySQL, Supabase PostgreSQL, Redis caching' },
       ],
     },
     {
@@ -34,6 +34,8 @@ const Skills = () => {
       items: [
         { icon: Terminal, name: 'Python / Linux', detail: 'scripting, automation, Ubuntu' },
         { icon: GitBranch, name: 'Tools', detail: 'Git, GitHub, Expo, Razorpay' },
+        { icon: Cloud, name: 'AWS', detail: 'cloud deployment and hosting' },
+        { icon: Building2, name: 'ERP / CRM', detail: 'ERP and CRM business systems' },
       ],
     },
   ];
